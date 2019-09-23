@@ -1,1 +1,1 @@
-web : gunicorn Intergration_API.wsgi
+web : gunicorn Intergration_API.wsgi --log-file
