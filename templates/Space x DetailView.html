@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Document</title>
+                <script src='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+                <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+                <script >
+                var1="{{val1}}";
+                alert("latitude is"+ var1)
+                </script>
+                <script>
+                var2="{{val2}}";
+                alert("longitude is"+ var2)
+                </script>
+
+<body>
+       
+        <h2>Flight Number:{{val5.Flight_Number}}</h2>
+        <h2>Mission Name:{{val5.Mission_name}}</h2>
+        
+        <h2>Launch Date Local:{{val5.Flight_date}}</h2>
+        <h2>Rocket Id:{{val5.Rocket_Id}}</h2>
+        <h2>Rocket Name:{{val5.Rocket_Name}}</h2>
+       <a href="{{val5.Mission_Patch_Link}}"><h2>Mission Patch Link</h2></a><br>
+       <a href="{{val5.Mission_Video_Link}}"><h2>Mission Video</h2></a>
+      
+
+       <div id='map' width="250" style='height:500px'></div>
+       <script>
+       mapboxgl.accessToken = 'pk.eyJ1IjoiamFzaDEwIiwiYSI6ImNrMDJwZno2bjFuNDEzY3ByOG00bXowZnUifQ.zPsn3Y7d9ZdmaCEW3EqM8w';
+       var map = new mapboxgl.Map({
+       container: 'map',
+       style: 'mapbox://styles/mapbox/satellite-streets-v11',
+       center:[var2,var1],
+       zoom:15,
+       });
+       </script>
+ 
+</body>
+</html>

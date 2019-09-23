@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>All Launch Details</h1><br><br>
+    {% for launch in launch %}
+        
+       
+       <h2>Flight Number:{{launch.Flight_Number}}</h2>
+       <h2>Mission Name:{{launch.Mission_name}}</h2>
+       
+    <h2>Launch Date Local:{{launch.Flight_date}}</h2>
+       <h2>Rocket Id:{{launch.Rocket_Id}}</h2><br>
+      
+       <a href="detail_view\{{launch.id}}"><h2>More Info</h2></a>
+       
+      
+
+      {% endfor %}
+    
+       <br><br><br>
+       
+      
+    
+</body>
+</html>
