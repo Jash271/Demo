@@ -12,7 +12,7 @@ class Launches(models.Model):
     Mission_Video_Link=models.URLField(null=True)
     Launch_site=models.TextField(null=True)
 
-    def __int__(self):
-        return Launches.Flight_Number
+    def __str__(self):
+        return self.Mission_name
 
     

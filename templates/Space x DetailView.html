@@ -10,13 +10,17 @@
                 <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
                 <script >
                 var1="{{val1}}";
-                alert("latitude is"+ var1)
+                alert("{{val5.Launch_site}}"+"latitude is"+ var1)
                 </script>
                 <script>
                 var2="{{val2}}";
-                alert("longitude is"+ var2)
+                alert("{{val5.Launch_site}}"+"longitude is"+ var2)
                 </script>
-
+<style>
+                body {
+                  background-color: lightblue;
+                }
+                </style>
 <body>
        
         <h2>Flight Number:{{val5.Flight_Number}}</h2>
@@ -28,7 +32,7 @@
        <a href="{{val5.Mission_Patch_Link}}"><h2>Mission Patch Link</h2></a><br>
        <a href="{{val5.Mission_Video_Link}}"><h2>Mission Video</h2></a>
       
-
+        <h2>Launch site : {{val5.Launch_site}}</h2>
        <div id='map' width="250" style='height:500px'></div>
        <script>
        mapboxgl.accessToken = 'pk.eyJ1IjoiamFzaDEwIiwiYSI6ImNrMDJwZno2bjFuNDEzY3ByOG00bXowZnUifQ.zPsn3Y7d9ZdmaCEW3EqM8w';
